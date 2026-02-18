@@ -20,8 +20,6 @@ public class CreateCategoryDto
 
 public class UpdateCategoryDto
 {
-    [Required]
-    public int Id { get; set; }
 
     [Required]
     [MaxLength(50)]

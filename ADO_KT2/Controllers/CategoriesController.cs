@@ -83,10 +83,6 @@ public class CategoriesController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateCategory(int id, UpdateCategoryDto updateDto)
     {
-        if (id != updateDto.Id)
-        {
-            return BadRequest();
-        }
 
         var category = await _unitOfWork.Categories.GetByIdAsync(id);
 
